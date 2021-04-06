@@ -56,7 +56,7 @@ for profiles in plist[0]['_items']:
 	# Sort the profile dictionary
 	for profile in sorted(profiles.get('_items')):
 		# Sort the payload dictionary
-		for payload in sorted(profile.get('_items')):
+		for payload in sorted(profile.get('_items', [])):
 			result += 'ProfileUUID = ' + profile.get('spconfigprofile_profile_uuid', 'No UUID') + '\n'
 			result += 'ProfileName = ' + profile.get('_name', 'No Profile Name') + '\n'
 			result += 'ProfileRemovalDisallowed = ' + str(profile.get('spconfigprofile_RemovalDisallowed')) + '\n'
