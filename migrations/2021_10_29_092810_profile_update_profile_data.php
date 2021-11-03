@@ -11,7 +11,7 @@ class ProfileUpdateProfileData extends Migration
     {
         $capsule = new Capsule();
         $capsule::schema()->table($this->tableName, function (Blueprint $table) {
-            $table->longText('profile_data')->nullable()->change();
+            $table->longText('payload_data')->nullable()->change();
         });
     }
     
@@ -19,7 +19,7 @@ class ProfileUpdateProfileData extends Migration
     {
         $capsule = new Capsule();
         $capsule::schema()->table($this->tableName, function (Blueprint $table) {
-            $table->text('profile_data')->change();
+            $table->text('payload_data')->change();
         });
     }
 }
